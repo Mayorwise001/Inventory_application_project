@@ -1,0 +1,342 @@
+body {
+    background-color: #f8f9fa;
+}
+.product-detail-container {
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-detail-container h1 {
+    margin-bottom: 20px;
+}
+
+.product-detail-container p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product-detail-container .product-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.product-image{
+width: 302px; /* Set a fixed width */
+    height: 300px; /* Set a fixed height */
+    /* object-fit: cover; Ensures the image covers the container, cropping if necessary */
+}
+.product-list-image{
+width: 298px; /* Set a fixed width */
+    height: 300px; /* Set a fixed height */
+    /* object-fit: cover; Ensures the image covers the container, cropping if necessary */
+}
+.btn {
+    margin-right: 10px;
+}
+
+.btn-custom {
+    margin-right: 10px;
+}
+.btn-delete {
+    background-color: #dc3545;
+    color: #ffffff;
+}
+.btn-delete:hover {
+    background-color: #c82333;
+    color: #ffffff;
+}
+
+.container {
+    margin-top: 50px;
+}
+.form-container {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container form {
+    margin-bottom: 20px;
+}
+
+.form-container label {
+    font-weight: bold;
+}
+
+.form-container input[type="text"],
+.form-container input[type="file"],
+.form-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-container .btn {
+    margin-right: 10px;
+}
+.form-container h1 {
+    margin-bottom: 20px;
+}
+.form-container .form-group {
+    margin-bottom: 15px;
+}
+.form-container button {
+    margin-top: 20px;
+}
+.error-message {
+    color: red;
+    margin-top: 20px;
+}
+
+.back-link {
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.container {
+    margin-top: 50px;
+}
+.container-fluid {
+    padding: 0;
+}
+
+.sidebar {
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    background-color: #343a40;
+    color: #fff;
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.sidebar .nav-link {
+    color: #ddd;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.sidebar .nav-link.active, .sidebar .nav-link:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    background-color: #ffffff;
+    min-height: 100vh;
+}
+
+
+.update-product-container {
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.update-product-container h1 {
+    margin-bottom: 20px;
+}
+
+.update-product-container form {
+    margin-bottom: 20px;
+}
+
+.update-product-container label {
+    font-weight: bold;
+}
+
+.update-product-container input[type="text"], 
+.update-product-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.update-product-container input[type="file"] {
+    margin-bottom: 10px;
+}
+
+.update-product-container .btn {
+    margin-right: 10px;
+}
+
+.products-container {
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-card {
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.product-card .card-body {
+    padding: 20px;
+}
+
+.product-card .card-title {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.product-card .card-text {
+    margin-bottom: 10px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-info {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+.btn-info:hover {
+    background-color: #138496;
+    border-color: #138496;
+}
+
+.categories-container {
+    background-color: #ffffff;
+    padding: 30px;
+    margin-top: 50px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.categories-container h1 {
+    margin-bottom: 20px;
+}
+
+.categories-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.categories-container li {
+    padding: 10px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.categories-container li:last-child {
+    border-bottom: none;
+}
+
+.categories-container a {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+    border-color: #d39e00;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+.list-group-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.card-body .d-flex {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.ml-2 {
+    margin-left: 0.5rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-4, .mb-3 {
+    margin-top: 1.5rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.mt-5 {
+    margin-top: 3rem !important;
+}

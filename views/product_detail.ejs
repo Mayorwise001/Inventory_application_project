@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('header.ejs') %>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar content -->
+            <%- include('sidebar.ejs') %> 
+            <div class="col-md-9 main-content">
+                <div class="product-detail-container">
+                    <h1>Product Detail</h1>
+                    <div id="product-detail">
+                        <p><strong>Product Name:</strong> <%= product.content1 %></p>
+                        <p><strong>Description:</strong> <%= product.content2 %></p>
+                        <p><strong>Price N:</strong> <%= product.price %></p>
+                        <p><strong>No available:</strong> <%= product.stock %></p>
+                        <p><strong>Category:</strong> <% if (product.category.length > 0) { %>
+                            <%= product.category[0].name %>
+                        <% } else { %>
+                            No category
+                        <% } %></p>
+                        <img src="<%= product.image %>" alt="Product Image" class="product-image"/>
+                    </div>
+                    <a href="/product_list" class="btn btn-secondary">Back to List</a>
+                    <a href="/upload/upload/<%= product._id %>/edit" class="btn btn-warning">Edit Product</a>
+                    <form action="/upload/upload/<%= product._id %>?_method=DELETE" method="POST" onsubmit="return confirm('Are you sure you want to delete this product?');" class="d-inline">
+                        <button type="submit" class="btn btn-danger">Delete Product</button>
+                    </form>
+                    <a href="/upload" class="btn btn-primary mt-3">Upload Another</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

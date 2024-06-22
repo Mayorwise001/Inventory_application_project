@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include('header.ejs') %>
+</head>
+<body>
+    <%-include('layout.ejs') %>
+    <div class="col-9">
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Inventory Management</h1>
+        <div class="row">
+            <% categories.forEach(category => { %>
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5 class="card-title"><%= category.name %> [No of products:<%= category.productCount %>]</h5>
+                            <a href="/upload/categories/<%= category._id %>" class="btn btn-primary">View Products</a>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,55 @@
+<!-- <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 250px; height: 100vh;">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+        <span class="fs-4">Inventory Management</span>
+    </a>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+            <a href="/" class="nav-link link-dark" aria-current="page">
+                Home
+            </a>
+        </li>
+        <li>
+            <a href="/product_list" class="nav-link link-dark">
+                All Products
+            </a>
+        </li>
+        <li>
+            <a href="/create" class="nav-link link-dark">
+                Create Product
+            </a>
+        </li>
+        <li>
+            <a href="categories/create" class="nav-link link-dark">
+                Create Category
+            </a>
+        </li>
+        <li>
+            <a href="/categories" class="nav-link link-dark">
+                Category List
+            </a>
+        </li>
+    </ul>
+    <hr>
+</div> -->
+
+<div class="col-md-3 sidebar">
+    <h2>Inventory Sidebar</h2>
+    <ul class="nav flex-column">
+        <li class="nav-item">
+            <a class="nav-link <%= activePage === '/' ? 'active' : '' %>" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link <%= activePage === '/product_list' ? 'active' : '' %>" href="/product_list">All Products</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link <%= activePage === '/upload/create' ? 'active' : '' %>" href="/upload/create">Create Product</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link <%= activePage === '/categories/create' ? 'active' : '' %>" href="/categories/create">Create Category</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link <%= activePage === '/categories' ? 'active' : '' %>" href="/categories">Category List</a>
+        </li>
+    </ul>
+</div>
