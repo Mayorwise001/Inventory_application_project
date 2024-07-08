@@ -1,38 +1,8 @@
-<!-- <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 250px; height: 100vh;">
-    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-        <span class="fs-4">Inventory Management</span>
-    </a>
-    <hr>
-    <ul class="nav nav-pills flex-column mb-auto">
-        <li class="nav-item">
-            <a href="/" class="nav-link link-dark" aria-current="page">
-                Home
-            </a>
-        </li>
-        <li>
-            <a href="/product_list" class="nav-link link-dark">
-                All Products
-            </a>
-        </li>
-        <li>
-            <a href="/create" class="nav-link link-dark">
-                Create Product
-            </a>
-        </li>
-        <li>
-            <a href="categories/create" class="nav-link link-dark">
-                Create Category
-            </a>
-        </li>
-        <li>
-            <a href="/categories" class="nav-link link-dark">
-                Category List
-            </a>
-        </li>
-    </ul>
-    <hr>
-</div> -->
 
+<div class="menu-bar">
+    <span class="menu-toggle">&#9776; Menu</span>
+    <span class="site-title">Inventory Management</span>
+</div>
 <div class="col-md-3 sidebar">
     <h2>Inventory Sidebar</h2>
     <ul class="nav flex-column">
@@ -53,3 +23,15 @@
         </li>
     </ul>
 </div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var menuToggle = document.querySelector('.menu-toggle');
+        var sidebar = document.querySelector('.sidebar');
+
+        menuToggle.addEventListener('click', function() {
+            sidebar.classList.toggle('show');
+        });
+    });
+</script>
