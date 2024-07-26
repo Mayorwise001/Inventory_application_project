@@ -4,6 +4,7 @@ const logger = require('morgan');
 const bodyParser = require('body-parser');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
+require('dotenv').config();
 const uploadRouter = require('./routes/upload')
 const category = require('./routes/categories')
 const multer = require('multer');
@@ -55,10 +56,8 @@ app.use((err, req, res, next) => {
  
 const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
-
-const dev_db_url =
-"mongodb+srv://Yourusername:YourPassword@cluster0.r54f38d.mongodb.net/NameofApp?retryWrites=true&w=majority&appName=Cluster0";
-const mongoDB = process.env.MONGODB_URI || dev_db_url;
+const MONGODB_URI = process.env.MONGODB_URI;
+const mongoDB = MONGODB_URI;
 
 main().catch((err) => console.log(err));
 async function main() {
