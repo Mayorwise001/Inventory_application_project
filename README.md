@@ -7,7 +7,7 @@ This **Inventory Management Application** offers a streamlined solution for busi
 - 💻 **Responsive UI/UX**: A custom-designed, user-friendly interface using **CSS**.  
 
 ## Technologies  
-- **Frontend**: React.js and CSS  
+- **View**: EJS  
 - **Backend**: Node.js and Express.js  
 - **Database**: MongoDB  
 - **Authentication**: JWT  
