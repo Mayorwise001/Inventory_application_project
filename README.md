@@ -22,3 +22,14 @@ This **Inventory Management Application** offers a streamlined solution for busi
 1. Clone the repository:  
    ```bash
    git clone https://github.com/your-username/inventory-management-app.git
+
+cd inventory-management-app
+
+npm install
+
+MONGO_URI=<your-mongodb-uri>
+JWT_SECRET=<your-jwt-secret>
+PORT=5000
+
+npm start
+
