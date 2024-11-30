@@ -33,3 +33,8 @@ PORT=5000
 
 npm start
 
+##  Contact
+For questions or support, reach out:
+
+Name: Tomosori Joseph Mayowa
+Email: tomosorijosephmayowa@gmail.com
