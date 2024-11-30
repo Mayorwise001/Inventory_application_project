@@ -36,5 +36,5 @@ npm start
 ##  Contact
 For questions or support, reach out:
 
-Name: Tomosori Joseph Mayowa
+Name: Tomosori Joseph Mayowa<br>
 Email: tomosorijosephmayowa@gmail.com
