@@ -23,15 +23,15 @@ This **Inventory Management Application** offers a streamlined solution for busi
    ```bash
    git clone https://github.com/your-username/inventory-management-app.git
 
-cd inventory-management-app
+2. cd inventory-management-app
 
-npm install
+3. npm install
 
-MONGO_URI=<your-mongodb-uri>
+4. MONGO_URI=<your-mongodb-uri>
 JWT_SECRET=<your-jwt-secret>
 PORT=5000
 
-npm start
+5. npm start
 
 ##  Contact
 For questions or support, reach out:
