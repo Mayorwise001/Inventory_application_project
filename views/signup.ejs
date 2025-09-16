@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="/signup.css">
+
+  <!-- Font Awesome for password toggle -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- Toastify -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</head>
+<body>
+  <div class="signup-container">
+    <form class="signup-form" action="/upload/signup" method="POST">
+      <h1 class="signup-title">Create Account</h1>
+      <p class="signup-subtitle">Join us today, it’s quick and easy</p>
+
+      <div class="input-group">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" required placeholder="Enter your first name" />
+      </div>
+
+      <div class="input-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" required placeholder="Enter your last name" />
+      </div>
+
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email" />
+      </div>
+
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required placeholder="Choose a username" />
+      </div>
+
+      <div class="input-group password-group">
+        <label for="password">Password</label>
+        <div class="password-wrapper">
+          <input type="password" id="password" name="password" required placeholder="Enter your password" />
+          <span class="toggle-password" onclick="togglePassword('password', this)">
+            <i class="fas fa-eye"></i>
+          </span>
+        </div>
+      </div>
+
+      <div class="input-group password-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <div class="password-wrapper">
+          <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Confirm your password" />
+          <span class="toggle-password" onclick="togglePassword('confirmPassword', this)">
+            <i class="fas fa-eye"></i>
+          </span>
+        </div>
+      </div>
+        <ul id="password-rules" style="list-style:none; padding: 10px; font-size: 14px;">
+    <li id="rule-length">❌ At least 8 characters</li>
+    <li id="rule-uppercase">❌ At least 1 uppercase letter</li>
+    <li id="rule-number">❌ At least 1 number</li>
+    <li id="rule-symbol">❌ At least 1 symbol (!@#$%^&*)</li>
+  </ul>
+
+      <button type="submit" class="signup-btn">Sign Up</button>
+
+      <div class="signup-footer">
+        <p>Already have an account? <a href="/upload/login">Login</a></p>
+      </div>
+    </form>
+  </div>
+
+  <!-- Password toggle -->
+  <script>
+    function togglePassword(inputId, element) {
+      const input = document.getElementById(inputId);
+      const icon = element.querySelector("i");
+
+      if (input.type === "password") {
+        input.type = "text";
+        icon.classList.remove("fa-eye");
+        icon.classList.add("fa-eye-slash");
+      } else {
+        input.type = "password";
+        icon.classList.remove("fa-eye-slash");
+        icon.classList.add("fa-eye");
+      }
+    }
+
+<% if (typeof message !== "undefined") { %>
+  Toastify({
+    text: "<%= message %>",
+    duration: 3000,
+    close: true,
+    gravity: "top", // "top" or "bottom"
+    position: "right", // "left", "center" or "right"
+    stopOnFocus: true, // Prevents dismissing on hover
+    style: {
+      background: "<%= success ? 'linear-gradient(135deg, #4CAF50, #2E7D32)' : 'linear-gradient(135deg, #F44336, #B71C1C)' %>",
+      color: "#fff",
+      fontWeight: "bold",
+      borderRadius: "8px",
+      boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.15)",
+      padding: "12px 20px",
+      fontSize: "14px",
+    },
+  }).showToast();
+
+  <% if (success) { %>
+    setTimeout(() => {
+      window.location.href = "/upload/login";
+    }, 3000);
+  <% } %>
+<% } %>
+
+const passwordInput = document.getElementById("password");
+  const confirmPasswordInput = document.getElementById("confirmPassword");
+
+  const rules = {
+    length: document.getElementById("rule-length"),
+    uppercase: document.getElementById("rule-uppercase"),
+    number: document.getElementById("rule-number"),
+    symbol: document.getElementById("rule-symbol"),
+  };
+
+  passwordInput.addEventListener("input", () => {
+    const value = passwordInput.value;
+
+    // Rule checks
+    const hasLength = value.length >= 8;
+    const hasUppercase = /[A-Z]/.test(value);
+    const hasNumber = /\d/.test(value);
+    const hasSymbol = /[!@#$%^&*(),.?":{}|<>]/.test(value);
+
+    // Update rule UI
+    rules.length.textContent = hasLength ? "✔️ At least 8 characters" : "❌ At least 8 characters";
+    rules.uppercase.textContent = hasUppercase ? "✔️ At least 1 uppercase letter" : "❌ At least 1 uppercase letter";
+    rules.number.textContent = hasNumber ? "✔️ At least 1 number" : "❌ At least 1 number";
+    rules.symbol.textContent = hasSymbol ? "✔️ At least 1 symbol" : "❌ At least 1 symbol";
+  });
+
+  document.querySelector("form").addEventListener("submit", (e) => {
+    const password = passwordInput.value;
+    const confirmPassword = confirmPasswordInput.value;
+
+    const valid =
+      password.length >= 8 &&
+      /[A-Z]/.test(password) &&
+      /\d/.test(password) &&
+      /[!@#$%^&*(),.?":{}|<>]/.test(password);
+
+    if (!valid) {
+      e.preventDefault();
+      Toastify({
+        text: "Password does not meet all requirements.",
+        duration: 3000,
+        gravity: "top",
+        position: "right",
+        backgroundColor: "linear-gradient(to right, #ff5f6d, #ffc371)",
+        style: {
+          borderRadius: "8px",
+          padding: "10px 20px",
+          fontWeight: "500",
+        },
+      }).showToast();
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      e.preventDefault();
+      Toastify({
+        text: "Passwords do not match.",
+        duration: 3000,
+        gravity: "top",
+        position: "right",
+        backgroundColor: "linear-gradient(to right, #ff5f6d, #ffc371)",
+        style: {
+          borderRadius: "8px",
+          padding: "10px 20px",
+          fontWeight: "500",
+        },
+      }).showToast();
+    }
+  });
+
+
+  </script>
+</body>
+</html>

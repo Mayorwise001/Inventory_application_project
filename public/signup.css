@@ -1,0 +1,150 @@
+/* === Overall container === */
+.signup-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f9f6f1;
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* === Form box === */
+.signup-form {
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 420px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* === Titles === */
+.signup-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.signup-subtitle {
+  font-size: 0.95rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #666;
+}
+
+/* === Input groups === */
+.input-group {
+  margin-bottom: 1.2rem;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+  color: #444;
+  font-weight: 500;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.6rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #D79024;
+  box-shadow: 0 0 0 3px rgba(215, 144, 36, 0.25);
+}
+
+/* === Password group === */
+.password-group {
+  position: relative;
+}
+
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #D79024;
+  user-select: none;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.toggle-password:hover {
+  transform: scale(1.2);
+  color: #b8731c;
+}
+
+/* === Button === */
+.signup-btn {
+  width: 100%;
+  padding: 0.85rem;
+  border: none;
+  border-radius: 0.6rem;
+  background: #D79024;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.signup-btn:hover {
+  background: #b8731c;
+  transform: translateY(-2px);
+}
+
+.signup-btn:active {
+  transform: translateY(1px);
+}
+
+/* === Footer === */
+.signup-footer {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.signup-footer a {
+  color: #D79024;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.signup-footer a:hover {
+  color: #b8731c;
+}
+
+/* === Animation === */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

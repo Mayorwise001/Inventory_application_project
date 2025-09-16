@@ -16,6 +16,7 @@
                         <p><strong>Description:</strong> <%= product.content2 %></p>
                         <p><strong>Price N:</strong> <%= product.price %></p>
                         <p><strong>No available:</strong> <%= product.stock %></p>
+                     
                         <p><strong>Category:</strong> <% if (product.category.length > 0) { %>
                             <%= product.category[0].name %>
                         <% } else { %>
@@ -28,7 +29,7 @@
                     <form action="/upload/upload/<%= product._id %>?_method=DELETE" method="POST" onsubmit="return confirm('Are you sure you want to delete this product?');" class="d-inline">
                         <button type="submit" class="btn btn-danger">Delete Product</button>
                     </form>
-                    <a href="/upload" class="btn btn-primary mt-3">Upload Another</a>
+                    <a href="/upload/home" class="btn btn-primary mt-3">Upload Another</a>
                 </div>
             </div>
         </div>

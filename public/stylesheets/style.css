@@ -145,7 +145,7 @@ body {
 }
 
 .sidebar .nav-link.active, .sidebar .nav-link:hover {
-    background-color: #007bff;
+    background-color: #D79024;
     color: #fff;
 }
 
@@ -260,23 +260,23 @@ body {
 }
 
 .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
+    background-color: #D79024;
+    border-color: #D79024;
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
+      background: linear-gradient(90deg, #d96c00 60%, #ffb347 100%);
+    border-color: #D79024;
 }
 
 .btn-info {
-    background-color: #17a2b8;
-    border-color: #17a2b8;
+    background: #D79024;
+    border-color: #D79024;
 }
 
 .btn-info:hover {
-    background-color: #138496;
-    border-color: #138496;
+     background: linear-gradient(90deg, #d96c00 60%, #ffb347 100%);
+    border-color: #D79024;
 }
 
 .categories-container {

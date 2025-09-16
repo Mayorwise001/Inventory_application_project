@@ -1,0 +1,243 @@
+.gsk-hero {
+position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  max-width: 1400px;
+  margin: 48px auto 0 auto;
+  padding: 0 32px;
+  background: linear-gradient(120deg, #f8fafc 0%, #e0e7ef 100%);
+  border-radius: 32px;
+  overflow: hidden;
+  min-height: 600px;
+  box-shadow: 0 8px 48px rgba(40,60,120,0.08);
+}
+
+/* Decorative SVG shape */
+.gsk-hero-svg {
+  position: absolute;
+  top: -60px;
+  left: -60px;
+  z-index: 0;
+  pointer-events: none;
+  filter: blur(2px);
+}
+
+/* Badge/Highlight */
+.gsk-hero-badge {
+  display: inline-block;
+  background: #D79024;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 16px;
+  padding: 4px 16px;
+  margin-left: 17px;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px rgba(255,121,0,0.10);
+}
+
+/* Eyebrow */
+.gsk-hero-eyebrow {
+  display: block;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 20px;
+  color: #111;
+  margin-left: 17px;
+  margin-bottom: 24px;
+  font-weight: 400;
+  position: relative;
+  z-index: 1;
+}
+
+/* Title */
+.gsk-hero-title {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 1.05;
+  color: #111;
+  margin-left: 17px;
+  letter-spacing: -1px;
+  margin-bottom: 18px;
+  position: relative;
+  z-index: 1;
+}
+
+
+.gradient-text {
+  background: linear-gradient(90deg, #ff7900 40%, #ffb347 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+
+/* Subheadline/Description */
+.gsk-hero-desc {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 22px;
+  color: #333;
+  margin-left: 17px;
+  margin-bottom: 32px;
+  max-width: 90%;
+  line-height: 1.4;
+  position: relative;
+  z-index: 1;
+}
+
+/* CTA Button */
+.gsk-hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(90deg, #ff7900 60%, #ffb347 100%);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 32px;
+  padding: 18px 44px;
+  text-decoration: none;
+  box-shadow: 0 4px 24px rgba(255,121,0,0.14);
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  z-index: 1;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+
+.gsk-hero-cta:hover,
+.gsk-hero-cta:focus {
+  background: linear-gradient(90deg, #d96c00 60%, #ffb347 100%);
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 8px 32px rgba(255,121,0,0.18);
+}
+
+.cta-arrow {
+  margin-left: 6px;
+  transition: transform 0.2s;
+}
+.gsk-hero-cta:hover .cta-arrow,
+.gsk-hero-cta:focus .cta-arrow {
+  transform: translateX(4px);
+}
+
+/* Content wrapper */
+.gsk-hero-content {
+  flex: 1 1 0;
+  max-width: 55%;
+  position: relative;
+  z-index: 2;
+}
+
+/* Image wrapper and overlay */
+.gsk-hero-image-wrapper {
+  flex: 1 1 0;
+  max-width: 48%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 1;
+  min-width: 340px;
+}
+.gsk-hero-image-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  border-radius: 32px 32px 32px 100px;
+  background: linear-gradient(120deg, rgba(255,121,0,0.08) 0%, rgba(0,0,0,0.16) 100%);
+  pointer-events: none;
+  z-index: 2;
+  animation: overlayMove 6s ease-in-out infinite alternate;
+}
+@keyframes overlayMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* Image */
+.gsk-hero-image {
+  width: 100%;
+  height: 520px;
+  max-width: 600px;
+  border-radius: 32px 32px 32px 100px;
+  object-fit: cover;
+  transition:
+    transform 0.7s cubic-bezier(.19,1,.22,1) 0s,
+    box-shadow 0.7s cubic-bezier(.19,1,.22,1) 0s;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+  will-change: transform, box-shadow;
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+}
+
+.gsk-hero-image:hover,
+.gsk-hero-image:focus {
+  transform: scale(1.045) translateY(-10px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.22);
+}
+
+
+.gsk-hero-badge {
+  display: inline-block;
+  background: linear-gradient(90deg, #ff7900 60%, #ffb347 100%);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 18px;
+  padding: 6px 20px;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px rgba(255,121,0,0.10);
+  text-transform: uppercase;
+  align-self: flex-start;
+}
+
+
+
+
+/* Responsive styles */
+@media (max-width: 1100px) {
+  .gsk-hero-title {
+    font-size: 42px;
+  }
+  .gsk-hero-content {
+    padding: 32px 0 32px 12px;
+  }
+  .gsk-hero-image {
+    height: 340px;
+  }
+}
+
+@media (max-width: 800px) {
+  .gsk-hero {
+    flex-direction: column;
+    gap: 32px;
+    padding: 0 8px;
+    min-height: unset;
+  }
+  .gsk-hero-content,
+  .gsk-hero-image-wrapper {
+    max-width: 100%;
+    padding: 0;
+  }
+  .gsk-hero-title {
+    font-size: 28px;
+  }
+  .gsk-hero-svg {
+    display: none;
+  }
+  .gsk-hero-image {
+    height: 220px;
+    border-radius: 24px 24px 24px 48px;
+  }
+  .gsk-hero-image-overlay {
+    border-radius: 24px 24px 24px 48px;
+  }
+}

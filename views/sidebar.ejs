@@ -7,7 +7,7 @@
     <h2>Inventory Sidebar</h2>
     <ul class="nav flex-column">
         <li class="nav-item">
-            <a class="nav-link <%= activePage === '/' ? 'active' : '' %>" href="/">Home</a>
+            <a class="nav-link <%= activePage === '/' ? 'active' : '' %>" href="/upload/home">Home</a>
         </li>
         <li class="nav-item">
             <a class="nav-link <%= activePage === '/product_list' ? 'active' : '' %>" href="/product_list">All Products</a>
@@ -20,6 +20,9 @@
         </li>
         <li class="nav-item">
             <a class="nav-link <%= activePage === '/categories' ? 'active' : '' %>" href="/categories">Category List</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link <%= activePage === '/upload/logout' ? 'active' : '' %>" href="/upload/logout">Logout</a>
         </li>
     </ul>
 </div>

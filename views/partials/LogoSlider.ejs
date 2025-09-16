@@ -1,0 +1,30 @@
+<% 
+  const logos = [
+    "image_1.png",
+    "image_2.jpg",
+    "image_3.jpg",
+    "image_4.jpg",
+    "image_5.jpg"
+  ]; 
+%>
+
+<div class="slider">
+  <h2>Trusted By</h2>
+  <div class="slide-track">
+    
+    <!-- Original logos -->
+    <% logos.forEach((logo, i) => { %>
+      <div class="slide">
+        <img src="/<%= logo %>" alt="Logo <%= i %>" />
+      </div>
+    <% }) %>
+
+    <!-- Duplicate logos for seamless loop -->
+    <% logos.forEach((logo, i) => { %>
+      <div class="slide">
+        <img src="/<%= logo %>" alt="Logo duplicate <%= i %>" />
+      </div>
+    <% }) %>
+
+  </div>
+</div>

@@ -1,13 +1,14 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
-const methodOverride = require('method-override');
-const path = require('path');
-const Category = require('../models/category');
+import express from "express";
+import  mongoose from 'mongoose';
+import bodyParser from 'body-parser';
+import methodOverride from 'method-override';
+import path from 'path';
+import Category from '../models/category.js';
 const router = express.Router();
+import authMiddleware from "../middleware/auth.js";
 
 
-router.get('/', async (req, res) => {
+router.get('/',authMiddleware, async (req, res) => {
     try {
         const categories = await Category.find();
         res.render('categoryList', { categories, title: 'Category List', activePage: '/categories' });
@@ -17,11 +18,11 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.get('/create', (req, res) => {
+router.get('/create',authMiddleware, async (req, res) => {
     res.render('createCategory' , {title: 'Create Category', activePage: '/categories/create'});
 });
 
-router.post('/create', async (req, res) => {
+router.post('/create',authMiddleware, async (req, res) => {
     const { name } = req.body;
     const newCategory = new Category({ name });
 
@@ -33,7 +34,7 @@ router.post('/create', async (req, res) => {
     }
 });
 
-router.get('/:id/edit', async (req, res) => {
+router.get('/:id/edit',authMiddleware,async (req, res) => {
     const { id } = req.params;
     try {
         const category = await Category.findById(id);
@@ -47,7 +48,7 @@ router.get('/:id/edit', async (req, res) => {
 });
 
 // Route to update a category
-router.put('/:id', async (req, res) => {
+router.put('/:id',authMiddleware, async (req, res) => {
     const { id } = req.params;
     const { name } = req.body;
     try {
@@ -59,7 +60,7 @@ router.put('/:id', async (req, res) => {
 });
 
 // Route to delete a category
-router.delete('/:id', async (req, res) => {
+router.delete('/:id',authMiddleware,async (req, res) => {
     const { id } = req.params;
     try {
         await Category.findByIdAndDelete(id);
@@ -68,4 +69,4 @@ router.delete('/:id', async (req, res) => {
         res.status(500).json({ error: err.message });
     }
 });
-module.exports = router;
+export default router;

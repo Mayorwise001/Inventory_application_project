@@ -1,0 +1,84 @@
+<!-- views/partials/footer.ejs -->
+<link rel="stylesheet" href="/styles/footer.css">
+
+<footer class="footer-container">
+  <div class="footer-content">
+    <!-- About -->
+    <div class="footer-section">
+      <h3>About Us</h3>
+      <p>
+        We are committed to simplifying work and empowering people by
+        creating digital solutions that drive engagement, productivity, and
+        growth across organizations.
+      </p>
+    </div>
+
+    <!-- Links -->
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Support -->
+    <div class="footer-section">
+      <h3>Support</h3>
+      <ul>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#help">Help Center</a></li>
+        <li><a href="#terms">Terms of Service</a></li>
+        <li><a href="#privacy">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="footer-section">
+      <h3>Newsletter</h3>
+      <form class="newsletter-form" id="newsletterForm">
+        <input
+          type="email"
+          id="emailInput"
+          name="email"
+          placeholder="Enter your email"
+          required
+        />
+        <button type="submit">Subscribe</button>
+      </form>
+
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-section copyright">
+    <p>© <%= new Date().getFullYear() %> Mayorwise Technologies. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Script for handling subscription -->
+<script>
+  document.getElementById("newsletterForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const email = document.getElementById("emailInput").value.trim();
+
+    if (!email) {
+      alert("Please enter your email");
+      return;
+    }
+
+    // Replace with real API call if needed
+    alert(`✅ Thanks for subscribing, ${email}`);
+    document.getElementById("emailInput").value = "";
+  });
+</script>
+
+<!-- FontAwesome for icons -->
+<script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>

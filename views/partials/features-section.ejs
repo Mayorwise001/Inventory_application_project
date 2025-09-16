@@ -1,0 +1,62 @@
+<% 
+  const features = [
+    {
+      img: "inventory 2.jpg",
+      bgClass: "bg-purple",
+      shape: "rectangle",
+      title: "#1 for frontline & desk teams",
+      text: `Enterprises like Virgin Group unite frontline and desk-based employees 
+             from across the globe in our complete, mobile-first employee 
+             experience platform.`,
+      linkText: "Virgin Group",
+      linkUrl: "#",
+    },
+    {
+      img: "inventory 3.jpg",
+      bgClass: "bg-yellow",
+      shape: "circle",
+      title: "Boost engagement, elevate culture",
+      text: `Inventory mgt App has a proven track record of boosting employee engagement, 
+             helping customers like Mater Private Network build a “collaborative 
+             community” that “changed its culture”.`,
+      linkText: "Mater Private Network",
+      linkUrl: "#",
+    },
+    {
+      img: "inventory 4.jpg",
+      bgClass: "bg-orange",
+      shape: "circle",
+      title: "Unrivaled adoption rates",
+      text: `Employees use Inventory mgt App because they want to, not because they have to, 
+             allowing adoption rates to soar over 90% for organizations like Ryanair.`,
+      linkText: "adoption rates to soar over 90%",
+      linkUrl: "#",
+    }
+  ];
+%>
+
+<div class="features-section">
+  <% features.forEach(function(feature, i) { %>
+    <div class="feature-card">
+      <div class="feature-img-wrapper">
+        <div class="feature-bg <%= feature.bgClass %> <%= feature.shape || '' %>"></div>
+
+        <!-- Decorative icons -->
+        <img src="icons8-star.gif" alt="" class="decor decor-top-left" />
+        <img src="icons8-hard-to-find-50.png" alt="" class="decor decor-bottom-right" />
+        <img src="icons8-star-trek-symbol.svg" alt="" class="decor decor-top-right" />
+
+        <img src="<%= feature.img %>" alt="<%= feature.title %>" class="feature-img" />
+      </div>
+
+      <h3 class="feature-title"><%= feature.title %></h3>
+      <div class="feature-separator"></div>
+
+      <p class="feature-text">
+        <%= feature.text.split(feature.linkText)[0] %>
+        <a href="<%= feature.linkUrl %>" class="feature-link"><%= feature.linkText %></a>
+        <%= feature.text.split(feature.linkText)[1] %>
+      </p>
+    </div>
+  <% }) %>
+</div>

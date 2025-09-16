@@ -1,0 +1,35 @@
+<header class="navbar">
+  <div class="navbar-container">
+    <!-- Logo -->
+    <a href="/" class="navbar-logo">
+      <img src="/Logo.png" alt="GSK Logo" />
+    </a>
+
+    <!-- Desktop / Mobile Menu -->
+    <nav class="navbar-menu" id="navbarMenu">
+      <ul>
+        <li><a href="/">About us</a></li>
+        <li><a href="/">Our areas of focus</a></li>
+        <li><a href="/">Research</a></li>
+        <li><a href="/">News</a></li>
+        <li><a href="/">Investors</a></li>
+        <li><a href="/">Careers</a></li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Toggle -->
+    <button class="navbar-toggle" id="navbarToggle">☰</button>
+  </div>
+</header>
+
+<!-- Script to handle toggle -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById("navbarToggle");
+    const menu = document.getElementById("navbarMenu");
+
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+  });
+</script>

@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+
+body {
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+
+
+.features-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background: #fff;
+}
+
+.feature-card {
+  text-align: left;
+  background: #fff;
+  padding: 2rem 1rem 2rem;
+  position: relative;
+}
+
+.bg-purple {
+  background: #8b5cf6;
+}
+
+.bg-yellow {
+  background: #facc15;
+}
+
+.bg-orange {
+  background: #fb923c;
+}
+
+.bg-blue {
+  background: #3b82f6;
+}
+
+.feature-bg {
+  position: absolute;
+  width: 160px;               /* slightly bigger than image */
+  height: 160px;
+  border-radius: 50%;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.15); /* soft glow */
+}
+
+.feature-img-wrapper {
+  position: relative;
+  display: flex;              /* centers content */
+  justify-content: center;
+  align-items: flex-end;
+  width: 160px;               /* matches bg size */
+  height: 160px;
+  margin-bottom: 1.5rem;
+}
+
+
+.feature-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%; /* clip into circle */
+  object-fit: cover;  /* fills circle neatly */
+  position: relative;
+  z-index: 2;
+}
+
+.feature-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 0.8rem;
+  letter-spacing: -2px;
+}
+
+.feature-text {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.feature-link {
+  color: #6b34eb;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.feature-link:hover {
+  text-decoration: underline;
+}
+
+
+.feature-separator {
+  width: 100%;                 /* adjust to how long you want */
+  height: 2px;                /* thickness of line */
+  background: rgba(0, 0, 0, 0.1);  /* subtle gray */
+  margin: 1rem auto;          /* spacing and centering */
+  border-radius: 2px;         /* smooth edges */
+  background: var(--primary-color);
+background: linear-gradient(to right, #8b5cf6, #3b82f6);
+}
+
+.feature-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;                         /* stick to the very left */
+  width: 2px;                      /* line thickness */
+  background: rgba(0, 0, 0, 0.1);  /* subtle gray */
+}
+
+
+/* Slanted rectangle background */
+.rectangle {
+  width: 180px;
+  height: 80px;
+  transform: translate(-50%, -50%) rotate(-12deg); /* slant effect */
+  border-radius: 12px; /* slightly rounded edges */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  margin-top: 30px;
+}
+
+
+
+/* Decorative icons */
+.decor {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  z-index: 1;
+}
+
+.decor-top-left {
+  top: -15px;
+  left: -12px;
+}
+
+.decor-top-right {
+  top: -10px;
+  right: -15px;
+}
+
+.decor-bottom-right {
+  bottom: -15px;
+  right: -10px;
+}
+
+
+
