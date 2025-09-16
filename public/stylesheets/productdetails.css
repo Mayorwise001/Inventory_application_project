@@ -1,0 +1,92 @@
+/* Product Details Section */
+.product-details {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.product-details h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Details Table */
+.details-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.details-table th,
+.details-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.details-table th {
+    background: #D79024;
+    color: white;
+    width: 30%;
+}
+
+.details-table td {
+    background: #fafafa;
+}
+
+/* Action Buttons */
+.details-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.details-actions .btn {
+    padding: 8px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+.details-actions .btn-warning {
+    background: #f0ad4e;
+}
+
+.details-actions .btn-danger {
+    background: #d9534f;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .details-table,
+    .details-table tbody,
+    .details-table tr,
+    .details-table th,
+    .details-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .details-table tr {
+        margin-bottom: 15px;
+    }
+
+    .details-table th {
+        background: #D79024;
+        color: white;
+        padding: 10px;
+        border-radius: 6px 6px 0 0;
+    }
+
+    .details-table td {
+        padding: 10px;
+        border: none;
+        background: #f9f9f9;
+        border-radius: 0 0 6px 6px;
+    }
+}

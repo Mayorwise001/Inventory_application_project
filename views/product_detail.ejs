@@ -1,29 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="/stylesheets/productdetails.css">
     <%- include('header.ejs') %>
+    
 </head>
 <body>
     <div class="container-fluid">
         <div class="row">
-            <!-- Sidebar content -->
+            <!-- Sidebar -->
             <%- include('sidebar.ejs') %> 
+
+            <!-- Main content -->
             <div class="col-md-9 main-content">
                 <div class="product-detail-container">
                     <h1>Product Detail</h1>
-                    <div id="product-detail">
-                        <p><strong>Product Name:</strong> <%= product.content1 %></p>
-                        <p><strong>Description:</strong> <%= product.content2 %></p>
-                        <p><strong>Price N:</strong> <%= product.price %></p>
-                        <p><strong>No available:</strong> <%= product.stock %></p>
-                     
-                        <p><strong>Category:</strong> <% if (product.category.length > 0) { %>
-                            <%= product.category[0].name %>
-                        <% } else { %>
-                            No category
-                        <% } %></p>
-                        <img src="<%= product.image %>" alt="Product Image" class="product-image"/>
-                    </div>
+
+                    <!-- Table view of details -->
+                    <table class="details-table">
+                        <tbody>
+                            <tr>
+                                <th>Product Name</th>
+                                <td><%= product.content1 %></td>
+                            </tr>
+                            <tr>
+                                <th>Description</th>
+                                <td><%= product.content2 %></td>
+                            </tr>
+                            <tr>
+                                <th>Price (₦)</th>
+                                <td><%= product.price %></td>
+                            </tr>
+                            <tr>
+                                <th>No Available</th>
+                                <td><%= product.stock %></td>
+                            </tr>
+                            <tr>
+                                <th>Category</th>
+                                <td>
+                                    <% if (product.category.length > 0) { %>
+                                        <%= product.category[0].name %>
+                                    <% } else { %>
+                                        No category
+                                    <% } %>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- Action buttons -->
                     <a href="/product_list" class="btn btn-secondary">Back to List</a>
                     <a href="/upload/upload/<%= product._id %>/edit" class="btn btn-warning">Edit Product</a>
                     <form action="/upload/upload/<%= product._id %>?_method=DELETE" method="POST" onsubmit="return confirm('Are you sure you want to delete this product?');" class="d-inline">

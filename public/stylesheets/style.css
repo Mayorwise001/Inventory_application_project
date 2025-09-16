@@ -2,6 +2,51 @@ body {
     background-color: #f8f9fa;
 }
 
+
+
+/* Product Table */
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.product-table th {
+    background-color: #D79024;
+    color: #fff;
+    text-align: left;
+    padding: 12px;
+    font-weight: 600;
+}
+
+.product-table td {
+    padding: 12px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.product-table tr:hover {
+    background-color: #f8f9fa;
+}
+
+.product-table .btn {
+    margin-right: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .product-detail-container {
     padding: 30px;
     border-radius: 8px;
