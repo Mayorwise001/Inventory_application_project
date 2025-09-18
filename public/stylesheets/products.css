@@ -4,13 +4,16 @@
     border-radius: 8px;
     overflow: hidden;
     font-size: 15px;
+    width: 100%;
+    border-collapse: collapse;
 }
 
-.products-table th, 
+.products-table th,
 .products-table td {
     vertical-align: middle;
     text-align: center;
     padding: 12px;
+    word-wrap: break-word;
 }
 
 .products-table th {
@@ -35,4 +38,59 @@
     padding: 5px 12px;
     font-size: 14px;
     border-radius: 6px;
+}
+
+/* Responsive styling */
+.table-container {
+    width: 100%;
+    overflow-x: auto; /* horizontal scroll on small screens */
+}
+
+/* Card-style table on small screens */
+@media (max-width: 768px) {
+    .products-table,
+    .products-table thead,
+    .products-table tbody,
+    .products-table th,
+    .products-table td,
+    .products-table tr {
+        display: block;
+        width: 100%;
+    }
+
+    .products-table thead {
+        display: none; /* hide headers */
+    }
+
+    .products-table tr {
+        margin-bottom: 15px;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .products-table td {
+        text-align: left;
+        padding: 8px 10px;
+        position: relative;
+        border: none;
+        border-bottom: 1px solid #eee;
+    }
+
+    .products-table td:last-child {
+        border-bottom: none;
+    }
+
+    /* Show labels before cell content */
+    .products-table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: 4px;
+        color: #555;
+        font-size: 13px;
+    }
 }
