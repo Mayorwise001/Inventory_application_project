@@ -97,7 +97,7 @@ router.get('/create' , authMiddleware, async (req, res) => {
 
 router.post('/create' , authMiddleware, upload.single('image'), async (req, res) => {
     const { content1, content2,price,stock, category } = req.body;
-    const imagePath = req.file.path.replace('public', '');
+
 
     const newProduct = new Product({
         content1,
@@ -105,7 +105,7 @@ router.post('/create' , authMiddleware, upload.single('image'), async (req, res)
         price,
         category,
         stock,
-        image: imagePath,
+     
     });
 
     try {

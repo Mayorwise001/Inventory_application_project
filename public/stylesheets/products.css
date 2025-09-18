@@ -1,0 +1,38 @@
+/* Table styling */
+.products-table {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 15px;
+}
+
+.products-table th, 
+.products-table td {
+    vertical-align: middle;
+    text-align: center;
+    padding: 12px;
+}
+
+.products-table th {
+    background-color: #343a40;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.products-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.products-table tr:hover {
+    background-color: #eef3f7;
+    transition: background 0.2s ease-in-out;
+}
+
+/* Button styling inside table */
+.products-table .btn {
+    padding: 5px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+}
